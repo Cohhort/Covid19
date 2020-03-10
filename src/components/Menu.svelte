@@ -1,5 +1,5 @@
 <script>
-let logo = './../static/cohhort_logo.png'
+let logo = './static/cohhort_logo.png'
 </script>
 
 <div class="relative bg-white overflow-hidden">
