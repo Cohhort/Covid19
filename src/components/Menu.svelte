@@ -1,4 +1,5 @@
 <script>
+let logo = './../static/cohhort_logo.png'
 </script>
 
 <div class="relative bg-white overflow-hidden">
@@ -9,6 +10,8 @@
           <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
             <div class="flex items-center justify-between w-full md:w-auto">
               <a href="/">
+
+                <img class="h-6 w-auto sm:h-6" src="{logo}" alt="" />
                 <!-- <img class="h-6 w-auto sm:h-6" src="https://cohhort.com/_nuxt/img/c9f4d01.png" alt="" /> -->
               </a>
             </div>
@@ -21,7 +24,7 @@
           <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
             Real Time Graphics to better understand the dynamic of the
             <br class="xl:hidden" />
-            <span class="text-cored-600">Covid19 epidemie</span>
+            <span class="text-cored">Covid19 epidemie</span>
           </h2>
           <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.

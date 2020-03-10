@@ -1,5 +1,5 @@
 <script>
-	import Tailwindcss from './css/Tailwindcss.svelte';
+	import Tailwindcss from './Tailwindcss.svelte';
 	import Menu from './components/Menu.svelte';
 	import Title from './components/Title.svelte';
 	import Chart from './components/Chart.svelte';
