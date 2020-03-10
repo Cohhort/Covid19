@@ -1,7 +1,5 @@
 <html>
 
-
-
 <head>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <style type="text/css" src="brutes.csv">
@@ -11,7 +9,9 @@
 
 
 <body>
-    <canvas id="myChart"></canvas>
+    <div class="chart-container" style="position: relative; height:40vh; width:80vw">
+        <canvas id="myChart"></canvas>  
+    </div>
 <script>
     fetch("https://covid19.cohhort.com/data/brutes.csv").then(function(response) {
         return response.ok ? response.text() : console.log("raté");
@@ -34,18 +34,24 @@
         console.log(getCountries(tab));
         console.log(getDeaths(tab));
         
+        
         var data = {
             labels: getDates(tab),
-            datasets: [{
+            /*datasets: [{
                     label: 'Hubei',
                     borderColor: 'rgb(255, 99, 132)',
-                    data: getConfirmed(tab.filter(row=>row[0]=="Italy"))
+                    data: getSick(tab.filter(row=>row[0]=="Italy"))
                 },
                  {
                     label: 'China hors Hubei',
                     borderColor: 'rgb(0, 99, 132)',
                     data: getConfirmed(tab.filter(row=>row[0]=="China-not-Hubei"))
-                }     ]
+                }     ]*/
+            datasets:getCountries(tab).map(country=>({
+                label: country, 
+                "data": getSick(tab.filter(row=>row[0]==country))
+            }))
+            
         }
 
         var chart = new Chart(ctx, {
