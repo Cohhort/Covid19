@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<style type="text/css" src="brutes.csv">
+    
+</style>
+</head>
+
+
+<body>
+    <canvas id="myChart"></canvas>
+<script>
+    fetch("https://covid19.cohhort.com/data/brutes.csv").then(function(response) {
+        return response.ok ? response.text() : console.log("raté");
+    }).then(function(text) {
+        console.log(text);
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var tab = text.split("\n").map(row=>row.split(','))
+        
+        var getColUniques = (tab,i) => {t = {}; tab.map( row=> row[0] == "country" || !row[1] ? "" : t[row[i]]=1); return Object.keys(t)};
+        var getCol = (tab,i) => tab.map( row => row[0] == "country" || !row[0] ? "" : row[i]);
+        var getDates = (tab) => getColUniques(tab, 1);
+        var getCountries = (tab) => getColUniques(tab, 0);
+        var getConfirmed = (tab) => getCol(tab, 2);
+        var getDeaths = (tab) => getCol(tab, 3);
+        var getRecovered = (tab) => getCol(tab, 4);
+        var getSick = (tab) => getCol(tab, 5);
+        var getNew = (tab) => getCol(tab, 6);
+        
+        console.log(getDates(tab));
+        console.log(getCountries(tab));
+        console.log(getDeaths(tab));
+        
+        var data = {
+            labels: getDates(tab),
+            datasets: [{
+                    label: 'Hubei',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: getConfirmed(tab.filter(row=>row[0]=="Italy"))
+                },
+                 {
+                    label: 'China hors Hubei',
+                    borderColor: 'rgb(0, 99, 132)',
+                    data: getConfirmed(tab.filter(row=>row[0]=="China-not-Hubei"))
+                }     ]
+        }
+
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+            data:data,
+            // Configuration options go here
+            options: {}
+        });
+      
+      });
+    
+    
+</script>
+
+
+</body>
+</html>
