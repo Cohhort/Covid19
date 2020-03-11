@@ -95,16 +95,16 @@ const getLastEvolution = (array) => {
         </p> -->
       </div>
     </div>
-    <div class="flex">
-      <div class="w-full mx-8 md:w-5/6">
+    <div class="flex flex-wrap">
+      <div class="w-full mx-8 xl:w-5/6">
         <canvas class="cursor-pointer" id="chartNew"></canvas>
       </div>
-      <div class="w-full mr-8 md:w-1/6">
-        <div>
+      <div class="w-full xl:w-1/6">
+        <div class="px-8 pt-6 xl:pr-8 xl:pl-0 xl:pt-0">
           <div class="mb-2 text-sm font-bold">Last Update ({dates[dates.length-1]})</div>
-          <div class="flex flex-col">
+          <div class="flex flex-wrap xl:flex-col">
             {#each datas as item,i}
-              <div class="flex items-center mb-1">
+              <div class="flex items-center mb-2 mr-3 xl:mr-0 xl:mb-1">
                 <div class="w-6 h-4 mr-2" style="background-color:{colors[i]}"></div>
                 <div class="text-xs {getLastEvolution(item.datas) > 20 && 'font-bold'}">{item.country}: {item.datas[item.datas.length-1]}
                 (<span class="{getLastEvolution(item.datas) <= 0 ? 'text-cogreen' : 'text-cored'}">
