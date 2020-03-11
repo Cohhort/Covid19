@@ -109,8 +109,8 @@ const getLastEvolution = (array) => {
               <div class="flex items-center mb-1">
                 <div class="w-6 h-4 mr-2" style="background-color:{colors[i]}"></div>
                 <div class="text-xs {getLastEvolution(item.datas) > 20 && 'font-bold'}">{item.country}: {item.datas[item.datas.length-1]}
-                (<span class="{getLastEvolution(item.datas) > 0 ? 'text-cogreen' : 'text-cored'}">
-                  {#if getLastEvolution(item.datas) > 0}+{/if}
+                (<span class="{getLastEvolution(item.datas) < 0 ? 'text-cogreen' : 'text-cored'}">
+                  {#if getLastEvolution(item.datas) < 0}+{/if}
                   {getLastEvolution(item.datas)}%
                 </span>)
                 </div>
