@@ -9,6 +9,6 @@
 
 <main>
 	<Menu />
-	<Title title="Covid19" />
+	<!-- <Title title="Covid19" /> -->
 	<Chart />
 </main>
