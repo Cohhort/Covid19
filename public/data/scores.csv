@@ -1,0 +1,117 @@
+country,sicks,sicks_score,new cases,new cases trend,confidence in data
+China-Hubei,16993,red,green,green,green
+Italy,8794,red,red,orange,red
+Republic of Korea,7212,red,green,green,green
+Iran (Islamic Republic of),5020,red,red,green,red
+France,1739,orange,orange,orange,orange
+Spain,1628,orange,red,red,red
+US,1599,orange,red,red,red
+Germany,1437,orange,orange,orange,green
+Diamond Princess,650,orange,green,green,green
+China-not-Hubei,522,orange,green,green,green
+Switzerland,485,orange,green,orange,?
+Japan,470,orange,green,green,green
+Norway,399,orange,orange,red,?
+Netherlands,378,orange,green,green,?
+UK,358,orange,green,green,orange
+Sweden,354,orange,green,orange,?
+Belgium,266,orange,green,green,?
+Denmark,261,orange,orange,red,?
+Austria,178,orange,green,orange,?
+Malaysia,105,orange,green,green,green
+Greece,89,green,green,green,?
+Bahrain,88,green,green,green,green
+Australia,83,green,green,green,green
+Singapore,82,green,green,green,green
+Canada,70,green,green,green,?
+Iceland,68,green,green,green,?
+Kuwait,68,green,green,green,?
+United Arab Emirates,62,green,green,green,green
+Iraq,61,green,green,green,red
+Egypt,57,green,green,green,?
+Israel,54,green,green,green,?
+India,52,green,green,green,?
+Hong Kong SAR,52,green,green,green,green
+San Marino,49,green,green,green,?
+Portugal,41,green,green,green,?
+Czech Republic,41,green,green,green,?
+Finland,39,green,green,green,?
+Lebanon,39,green,green,green,?
+Ireland,34,green,green,green,?
+Brazil,31,green,green,green,?
+Slovenia,31,green,green,green,?
+Philippines,30,green,green,green,?
+Taipei and environs,29,green,green,green,green
+Indonesia,25,green,green,green,?
+occupied Palestinian territory,25,green,green,green,?
+Qatar,24,green,green,green,?
+Poland,22,green,green,green,?
+Romania,22,green,green,green,?
+Algeria,20,green,green,green,?
+Thailand,19,green,green,green,green
+Saudi Arabia,19,green,green,green,?
+Russian Federation,17,green,green,green,?
+Argentina,16,green,green,green,?
+Pakistan,15,green,green,green,?
+Georgia,15,green,green,green,?
+Viet Nam,15,green,green,green,green
+Ecuador,15,green,green,green,?
+Croatia,14,green,green,green,?
+Chile,13,green,green,green,?
+Estonia,12,green,green,green,?
+Peru,11,green,green,green,?
+Azerbaijan,11,green,green,green,?
+Albania,10,green,green,green,?
+Costa Rica,9,green,green,green,?
+Hungary,9,green,green,green,?
+Oman,9,green,green,green,?
+South Africa,7,green,green,green,?
+Slovakia,7,green,green,green,?
+North Macedonia,7,green,green,green,?
+Latvia,7,green,green,green,?
+Belarus,6,green,green,green,?
+Maldives,6,green,green,green,?
+Bosnia and Herzegovina,5,green,green,green,?
+Serbia,5,green,green,green,?
+Tunisia,5,green,green,green,?
+Afghanistan,5,green,green,green,?
+French Guiana,5,green,green,green,?
+Dominican Republic,5,green,green,green,?
+Luxembourg,5,green,green,green,?
+Malta,5,green,green,green,?
+New Zealand,5,green,green,green,?
+Bulgaria,4,green,green,green,?
+Senegal,3,green,green,green,?
+Mexico,3,green,green,green,?
+Cyprus,3,green,green,green,?
+Colombia,3,green,green,green,?
+Bangladesh,3,green,green,green,?
+Republic of Moldova,3,green,green,green,?
+Faroe Islands,2,green,green,green,?
+Martinique,2,green,green,green,?
+Saint Martin,2,green,green,green,?
+Nigeria,2,green,green,green,?
+Cameroon,2,green,green,green,?
+Morocco,2,green,green,green,?
+Saint Barthelemy,1,green,green,green,?
+Monaco,1,green,green,green,?
+Channel Islands,1,green,green,green,?
+Ukraine,1,green,green,green,?
+Andorra,1,green,green,green,?
+Panama,1,green,green,green,?
+Togo,1,green,green,green,?
+Jordan,1,green,green,green,?
+Armenia,1,green,green,green,?
+Paraguay,1,green,green,green,?
+Holy See,1,green,green,green,?
+Liechtenstein,1,green,green,green,?
+Lithuania,1,green,green,green,?
+Bhutan,1,green,green,green,?
+Cambodia,1,green,green,green,?
+Burkina Faso,1,green,green,green,?
+Mongolia,1,green,green,green,?
+Brunei,1,green,green,green,?
+Sri Lanka,0,green,green,green,?
+Gibraltar,0,green,green,green,?
+Macao SAR,0,green,green,green,?
+Nepal,0,green,green,green,?
