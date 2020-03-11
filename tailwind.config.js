@@ -6,12 +6,12 @@ module.exports = {
     },
     extend: {
       colors: {
-        coblue: '#ff4f81',
-        cored: '#ff6c5f',
-        coorange: '#ffc168',
-        coyellow: '#2dde98',
-        cogreen: '#1cc7d0',
-        coazul: '#00aeff',
+        cored: '#ff4f81',
+        coorange: '#ff6c5f',
+        coyellow: '#ffc168',
+        cogreen: '#2dde98',
+        coazul: '#1cc7d0',
+        coblue: '#00aeff',
         copurple: '#8e43e7',
       },
       fontSize: {

@@ -1,7 +1,7 @@
 <script>
 import { onMount } from "svelte";
 import Chart from "chart.js";
-import { colorPalet, getArrayColor, fetchDatas, getCountries, getDates, getSick } from './../helpers/datas.js'
+import { colorPalet, getArrayColor, fetchDatas, getCountries, getDates, getNew } from './../helpers/datas.js'
 
 export let graph
 
@@ -20,14 +20,14 @@ onMount(async () => {
   datas = countries.map((country,i)=>{
     return {
       country: country,
-      datas: getSick(tab.filter(row=>row[0]==country))
+      datas: getNew(tab.filter(row=>row[0]==country))
     }
   })
   
   colors = getArrayColor(countries.length, colorPalet, 1)
   colorsBg = getArrayColor(countries.length, colorPalet, 0.5)
   
-  var ctx = document.getElementById("myChart").getContext("2d");
+  var ctx = document.getElementById("chartNew").getContext("2d");
   var chart = await new Chart(ctx, {
     type: "line",
     data: {
@@ -89,7 +89,7 @@ const getLastEvolution = (array) => {
       <h2 class="text-4xl font-bold leading-10 tracking-tight text-gray-800 font-display sm:text-5xl sm:leading-none md:text-52xl">
         Real-time Graphics to better understand
         <br />
-        <span class="text-cored">Covid19 dynamic</span>
+        <span class="text-cored">New</span>
       </h2>
       <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
         Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
@@ -98,7 +98,7 @@ const getLastEvolution = (array) => {
   </div>
   <div class="flex">
     <div class="w-full mx-8 md:w-5/6">
-      <canvas class="cursor-pointer" id="myChart"></canvas>
+      <canvas class="cursor-pointer" id="chartNew"></canvas>
     </div>
     <div class="w-full mr-8 md:w-1/6">
       <div>
