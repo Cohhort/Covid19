@@ -98,8 +98,10 @@ const getLastEvolution = (array) => {
       </div>
     </div>
     <div class="flex flex-wrap">
-      <div class="w-full mx-8 xl:w-5/6">
-        <canvas class="cursor-pointer" id="chartConfirmed"></canvas>
+      <div class="w-full xl:w-5/6">
+        <div class="px-8">
+          <canvas class="cursor-pointer" id="chartConfirmed"></canvas>
+        </div>
       </div>
       <div class="w-full xl:w-1/6">
         <div class="px-8 pt-6 xl:pr-8 xl:pl-0 xl:pt-0">
