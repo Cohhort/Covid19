@@ -83,38 +83,38 @@ const getLastEvolution = (array) => {
 }
 </script>
 
-<div class="max-w-screen-xl mx-auto my-24">
-  <div class="max-w-screen-xl px-4 mx-auto my-10 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-    <div class="sm:text-center lg:text-left">
-      <h2 class="text-4xl font-bold leading-10 tracking-tight text-gray-800 font-display sm:text-5xl sm:leading-none md:text-52xl">
-        Real-time Graphics to better understand
-        <br />
-        <span class="text-cored">Recovered</span>
-      </h2>
-      <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-      </p>
+<div class="pb-1 shadow-xl">
+  <div class="max-w-screen-xl mx-auto my-24">
+    <div class="max-w-screen-xl px-4 mx-auto my-10 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+      <div class="sm:text-center lg:text-left">
+        <h2 class="mb-24 text-4xl font-bold leading-10 tracking-tight text-gray-800 font-display sm:text-5xl sm:leading-none md:text-52xl">
+          Evolution of <span class="text-coorange">Recovered Cases</span> over the world
+        </h2>
+        <!-- <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+        </p> -->
+      </div>
     </div>
-  </div>
-  <div class="flex">
-    <div class="w-full mx-8 md:w-5/6">
-      <canvas class="cursor-pointer" id="chartRecovered"></canvas>
-    </div>
-    <div class="w-full mr-8 md:w-1/6">
-      <div>
-        <div class="mb-2 text-sm font-bold">Last Update ({dates[dates.length-1]})</div>
-        <div class="flex flex-col">
-          {#each datas as item,i}
-            <div class="flex items-center mb-1">
-              <div class="w-6 h-4 mr-2" style="background-color:{colors[i]}"></div>
-              <div class="text-xs {getLastEvolution(item.datas) > 20 && 'font-bold'}">{item.country}: {item.datas[item.datas.length-1]}
-              (<span class="{getLastEvolution(item.datas) > 0 ? 'text-cogreen' : 'text-cored'}">
-                {#if getLastEvolution(item.datas) > 0}+{/if}
-                {getLastEvolution(item.datas)}%
-              </span>)
+    <div class="flex">
+      <div class="w-full mx-8 md:w-5/6">
+        <canvas class="cursor-pointer" id="chartRecovered"></canvas>
+      </div>
+      <div class="w-full mr-8 md:w-1/6">
+        <div>
+          <div class="mb-2 text-sm font-bold">Last Update ({dates[dates.length-1]})</div>
+          <div class="flex flex-col">
+            {#each datas as item,i}
+              <div class="flex items-center mb-1">
+                <div class="w-6 h-4 mr-2" style="background-color:{colors[i]}"></div>
+                <div class="text-xs {getLastEvolution(item.datas) > 20 && 'font-bold'}">{item.country}: {item.datas[item.datas.length-1]}
+                (<span class="{getLastEvolution(item.datas) > 0 ? 'text-cogreen' : 'text-cored'}">
+                  {#if getLastEvolution(item.datas) > 0}+{/if}
+                  {getLastEvolution(item.datas)}%
+                </span>)
+                </div>
               </div>
-            </div>
-          {/each}
+            {/each}
+          </div>
         </div>
       </div>
     </div>
