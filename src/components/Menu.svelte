@@ -8,10 +8,9 @@
         <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start">
           <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
             <div class="flex items-center justify-between w-full md:w-auto">
-              <a href="/">
+              <!-- <a href="/">
                 <img class="h-6 w-auto sm:h-6" src="./static/cohhort_logo.png" alt="" />
-                <!-- <img class="h-6 w-auto sm:h-6" src="https://cohhort.com/_nuxt/img/c9f4d01.png" alt="" /> -->
-              </a>
+              </a> -->
             </div>
           </div>
         </nav>
@@ -28,7 +27,7 @@
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
           </p>
           <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div class="rounded-md shadow">
+            <!-- <div class="rounded-md shadow">
               <a href="/" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
                 Get started
               </a>
@@ -37,7 +36,7 @@
               <a href="/" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
                 Live demo
               </a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

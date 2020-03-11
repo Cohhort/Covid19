@@ -140,6 +140,7 @@
       const array = datas.split("\n").map(row=>row.split(','))
       return array
     })
+    tab = tab.filter(row=>row && row[0] && row[1]).map(row=>{row[1] = row[1].split("/").reverse().join('/'); return row;});
     console.log('tab',tab)
     console.log('tab2',tab)
     console.log('getCountries(tab)',getCountries(tab))
@@ -242,7 +243,7 @@
       </p>
     </div>
   </div>
-  <div class="flex" style="height:400px;">
+  <div class="flex">
     <div class="mx-8 w-5/6">
       <canvas class="cursor-pointer" id="myChart"></canvas>
     </div>
