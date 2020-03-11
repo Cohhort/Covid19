@@ -55,10 +55,10 @@ onMount(async () => {
 
 <main>
 	<Menu />
-	<ChartConfirmed {dates} {datas} {colors} {colorsBg} />
+	<ChartSick />
+	<ChartConfirmed />
 	<ChartDead />
 	<ChartRecovered />
-	<ChartSick />
 	<ChartNew />
 	<!-- <Title title="Covid19" /> -->
 	<!-- <Chart graph="sicks"/> -->
