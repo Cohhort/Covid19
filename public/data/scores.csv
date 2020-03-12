@@ -1,7 +1,7 @@
 country,sicks,sicks_score,new cases,new cases trend,confidence in data
 China-Hubei,15593,red,green,green,green
 Italy,10590,red,red,orange,orange
-"Korea, South",7407,red,orange,green,green
+South Korea,7407,red,orange,green,green
 Iran,5687,red,red,orange,red
 US,2297,orange,red,red,red
 France,2224,orange,red,red,orange
@@ -11,8 +11,8 @@ Switzerland,644,orange,orange,red,?
 Norway,597,orange,orange,red,?
 China-not-Hubei,523,orange,green,green,green
 Japan,506,orange,green,red,green
-Netherlands,498,orange,green,orange,?
 Sweden,498,orange,orange,red,?
+Netherlands,498,orange,green,orange,?
 Denmark,443,orange,orange,red,?
 United Kingdom,432,orange,green,orange,orange
 Cruise Ship,364,orange,green,green,green
@@ -33,17 +33,17 @@ San Marino,60,green,green,green,?
 Portugal,59,green,green,green,?
 Finland,58,green,green,green,?
 Lebanon,57,green,green,green,?
-India,57,green,green,green,?
 Slovenia,57,green,green,green,?
 United Arab Emirates,57,green,green,green,green
+India,57,green,green,green,?
 Iraq,49,green,green,green,red
 Philippines,46,green,green,green,?
 Ireland,42,green,green,green,?
 Romania,39,green,green,green,?
 Brazil,38,green,green,green,?
 Egypt,32,green,green,green,red
-Poland,31,green,green,green,?
 Indonesia,31,green,green,green,?
+Poland,31,green,green,green,?
 Taiwan*,30,green,green,green,green
 Georgia,24,green,green,green,?
 Thailand,24,green,green,green,green
@@ -53,64 +53,64 @@ Algeria,20,green,green,green,?
 Saudi Arabia,20,green,green,green,?
 Croatia,19,green,green,green,?
 Argentina,18,green,green,green,?
-Pakistan,17,green,green,green,?
 Ecuador,17,green,green,green,?
+Pakistan,17,green,green,green,?
 Russia,17,green,green,green,?
 Estonia,16,green,green,green,?
-South Africa,13,green,green,green,?
-Costa Rica,13,green,green,green,?
 Hungary,13,green,green,green,?
+Costa Rica,13,green,green,green,?
+South Africa,13,green,green,green,?
 Serbia,12,green,green,green,?
-Albania,11,green,green,green,?
 Brunei,11,green,green,green,?
+Albania,11,green,green,green,?
 Peru,11,green,green,green,?
 Slovakia,10,green,green,green,?
 Latvia,9,green,green,green,?
 Colombia,9,green,green,green,?
 Oman,9,green,green,green,?
-Azerbaijan,8,green,green,green,?
 Maldives,8,green,green,green,?
+Azerbaijan,8,green,green,green,?
+Bosnia and Herzegovina,7,green,green,green,?
 North Macedonia,7,green,green,green,?
 Tunisia,7,green,green,green,?
-Bosnia and Herzegovina,7,green,green,green,?
 Panama,7,green,green,green,?
-Afghanistan,7,green,green,green,?
 Luxembourg,7,green,green,green,?
-Bulgaria,6,green,green,green,?
-Belarus,6,green,green,green,?
+Afghanistan,7,green,green,green,?
 Malta,6,green,green,green,?
+Belarus,6,green,green,green,?
 Cyprus,6,green,green,green,?
-Dominican Republic,5,green,green,green,?
+Bulgaria,6,green,green,green,?
 French Guiana,5,green,green,green,?
 Paraguay,5,green,green,green,?
+Dominican Republic,5,green,green,green,?
 New Zealand,5,green,green,green,?
 Morocco,4,green,green,green,?
 Mexico,4,green,green,green,?
 Lithuania,3,green,green,green,?
 Bangladesh,3,green,green,green,?
-Martinique,3,green,green,green,?
-Senegal,3,green,green,green,?
 Moldova,3,green,green,green,?
-Honduras,2,green,green,green,?
-Nigeria,2,green,green,green,?
+Senegal,3,green,green,green,?
+Martinique,3,green,green,green,?
 Bolivia,2,green,green,green,?
+Nigeria,2,green,green,green,?
+Burkina Faso,2,green,green,green,?
 Cambodia,2,green,green,green,?
 Cameroon,2,green,green,green,?
-Burkina Faso,2,green,green,green,?
-Monaco,1,green,green,green,?
+Honduras,2,green,green,green,?
 Armenia,1,green,green,green,?
 Holy See,1,green,green,green,?
 Andorra,1,green,green,green,?
 Ukraine,1,green,green,green,?
+Mongolia,1,green,green,green,?
 Turkey,1,green,green,green,?
-Liechtenstein,1,green,green,green,?
+Jamaica,1,green,green,green,?
 Togo,1,green,green,green,?
-Reunion,1,green,green,green,?
-Cote d'Ivoire,1,green,green,green,?
-Congo (Kinshasa),1,green,green,green,?
+Monaco,1,green,green,green,?
 Jordan,1,green,green,green,?
+Reunion,1,green,green,green,?
 Sri Lanka,1,green,green,green,?
 Bhutan,1,green,green,green,?
-Jamaica,1,green,green,green,?
-Mongolia,1,green,green,green,?
+Congo (Kinshasa),1,green,green,green,?
+Liechtenstein,1,green,green,green,?
+Cote d'Ivoire,1,green,green,green,?
 Nepal,0,green,green,green,?
