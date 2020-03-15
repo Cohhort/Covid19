@@ -1,46 +1,44 @@
 <script>
 import { onMount } from "svelte";
 import Chart from "chart.js";
-import { colorPalet, getArrayColor, fetchDatas, getCountries, getDates, getSick } from './../helpers/datas.js'
 
-export let graph
+export let datas
+export let type
+export let country = false
+let selector = ''
 
-let tab = []
-let dates = []
-let datesInversed = []
-let countries = []
-let datas = []
-let colors = []
-let colorsBg = []
+console.log('datas Chart.svelte',datas, type)
+
+selector = !country ? 'chart_'+type : String('chart_'+type+'_'+datas[0].country.substring(0, 12).toLowerCase())
+console.log('selector Chart.svelte',selector)
+
+function is_touch_device() {  
+  try {  
+    document.createEvent("TouchEvent");  
+    return true;  
+  } catch (e) {  
+    return false;  
+  }  
+}
 
 onMount(async () => {
-  tab = await fetchDatas('brutes.csv')
-  dates = getDates(tab)
-  countries = getCountries(tab)
-  datas = countries.map((country,i)=>{
-    return {
-      country: country,
-      datas: getSick(tab.filter(row=>row[0]==country))
-    }
-  })
-  
-  colors = getArrayColor(countries.length, colorPalet, 1)
-  colorsBg = getArrayColor(countries.length, colorPalet, 0.5)
-  
-  var ctx = document.getElementById("myChart").getContext("2d");
+  // selector = !country ? 'chart_' : String('chart_'+type+'_'+datas[0].country.substring(0, 2).toLowerCase())
+  // console.log('selector Chart.svelte',selector)
+  const touchable = is_touch_device()
+  var ctx = document.getElementById(selector)
   var chart = await new Chart(ctx, {
     type: "line",
     data: {
-      labels: dates,
+      labels: datas[0].dates,
       datasets: datas.map((data,i)=>{
         let config = {
           label: data.country,
           borderWidth: 2,
-          borderColor: colors[i],
-          pointRadius: 2,
-          pointBorderWidth: 2,
-          backgroundColor: colorsBg[i],
-          data: data.datas
+          borderColor: data.color,
+          pointRadius: touchable ? 0 : 1,
+          pointBorderWidth: touchable ? 0 : 1,
+          backgroundColor: data.colorBg,
+          data: data[type]
         }
         i === 0 ? config.fill = 'origin' : ''
         return config
@@ -75,48 +73,8 @@ onMount(async () => {
         // custom: customTooltips
       }
     }
-  });
-});
-
-const getLastEvolution = (array) => {
-  return Math.round((array[array.length-1]-array[array.length-2])/array[array.length-2]*10000)/100
-}
+  })
+})
 </script>
 
-<div class="max-w-screen-xl mx-auto my-24">
-  <div class="max-w-screen-xl px-4 mx-auto my-10 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-    <div class="sm:text-center lg:text-left">
-      <h2 class="text-4xl font-bold leading-10 tracking-tight text-gray-800 font-display sm:text-5xl sm:leading-none md:text-52xl">
-        Real-time Graphics to better understand
-        <br />
-        <span class="text-cored">Covid19 dynamic</span>
-      </h2>
-      <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-      </p>
-    </div>
-  </div>
-  <div class="flex">
-    <div class="w-full mx-8 md:w-5/6">
-      <canvas class="cursor-pointer" id="myChart"></canvas>
-    </div>
-    <div class="w-full mr-8 md:w-1/6">
-      <div>
-        <div class="mb-2 text-sm font-bold">Last Update ({dates[dates.length-1]})</div>
-        <div class="flex flex-col">
-          {#each datas as item,i}
-            <div class="flex items-center mb-1">
-              <div class="w-6 h-4 mr-2" style="background-color:{colors[i]}"></div>
-              <div class="text-xs {getLastEvolution(item.datas) > 20 && 'font-bold'}">{item.country}: {item.datas[item.datas.length-1]}
-              (<span class="{getLastEvolution(item.datas) > 0 ? 'text-cogreen' : 'text-cored'}">
-                {#if getLastEvolution(item.datas) > 0}+{/if}
-                {getLastEvolution(item.datas)}%
-              </span>)
-              </div>
-            </div>
-          {/each}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<canvas class="cursor-pointer" id="{selector}"></canvas>
