@@ -23,7 +23,7 @@ const getLastEvolution = (array) => {
     </div>
     <div class="flex flex-wrap">
       <div class="w-full xl:w-1/2">
-        <div class="px-8 pb-4">
+        <div class="pb-4 lg:px-8">
           <div class="flex items-center justify-between w-full mb-4">
             <a href="/#global_sick"><h3 class="text-xl font-bold">Active Sick Cases</h3></a>
             <div class="{getLastEvolution(data.sick) <= 0 ? 'text-cogreen' : 'text-cored'} {getLastEvolution(data.sick) > 20 && 'font-bold'}">
@@ -35,7 +35,7 @@ const getLastEvolution = (array) => {
         </div>
       </div>
       <div class="w-full xl:w-1/2">
-        <div class="px-8 pb-4">
+        <div class="pb-4 lg:px-8">
           <div class="flex items-center justify-between w-full mb-4">
             <a href="/#global_new"><h3 class="text-xl font-bold">New Cases</h3></a>
             <div class="{getLastEvolution(data.new) <= 0 ? 'text-cogreen' : 'text-cored'} {getLastEvolution(data.new) > 20 && 'font-bold'}">
@@ -47,7 +47,7 @@ const getLastEvolution = (array) => {
         </div>
       </div>
       <div class="w-full xl:w-1/2">
-        <div class="px-8 pb-4">
+        <div class="pb-4 lg:px-8">
           <div class="flex items-center justify-between w-full mb-4">
             <a href="/#global_recovered"><h3 class="text-xl font-bold">Recovered Cases</h3></a>
             <div class="{getLastEvolution(data.recovered) > 0 ? 'text-cogreen' : 'text-cored'} {getLastEvolution(data.recovered) > 20 && 'font-bold'}">
@@ -59,7 +59,7 @@ const getLastEvolution = (array) => {
         </div>
       </div>
       <div class="w-full xl:w-1/2">
-        <div class="px-8 pb-4">
+        <div class="pb-4 lg:px-8">
           <div class="flex items-center justify-between w-full mb-4">
             <a href="/#global_dead"><h3 class="text-xl font-bold">Death Cases</h3></a>
             <div class="{getLastEvolution(data.dead) <= 0 ? 'text-cogreen' : 'text-cored'} {getLastEvolution(data.dead) > 20 && 'font-bold'}">
@@ -71,7 +71,7 @@ const getLastEvolution = (array) => {
         </div>
       </div>
       <div class="w-full xl:w-1/2">
-        <div class="px-8 pb-4">
+        <div class="pb-4 lg:px-8">
           <div class="flex items-center justify-between w-full mb-4">
             <a href="/#global_confirmed"><h3 class="text-xl font-bold">Confirmed Cases</h3></a>
             <div class="{getLastEvolution(data.confirmed) <= 0 ? 'text-cogreen' : 'text-cored'} {getLastEvolution(data.confirmed) > 20 && 'font-bold'}">

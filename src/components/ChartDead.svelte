@@ -25,7 +25,7 @@ const getLastEvolution = (array) => {
     </div>
     <div class="flex flex-wrap">
       <div class="w-full xl:w-4/5">
-        <div class="px-8">
+        <div class="lg:px-8">
           {#if datas.length > 0}
             <Chart {datas} {type} />
           {/if}
