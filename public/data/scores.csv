@@ -5,14 +5,14 @@ Iran,9548,red,red,green,red
 Spain,9070,red,red,green,red
 Germany,7188,red,red,orange,green
 South Korea,7024,red,green,green,green
-France,6490,red,red,green,orange
+France,6490,red,red,orange,orange
 US,4530,orange,red,orange,orange
 Switzerland,2182,orange,orange,orange,green
 United Kingdom,1474,orange,orange,green,orange
-Netherlands,1388,orange,orange,green,orange
+Netherlands,1388,orange,orange,orange,orange
 Norway,1329,orange,orange,green,?
 Sweden,1096,orange,green,green,green
-Belgium,1052,orange,orange,green,?
+Belgium,1052,orange,orange,orange,?
 Austria,1009,orange,orange,orange,?
 Denmark,928,orange,green,green,?
 Japan,654,orange,green,green,green
@@ -27,8 +27,8 @@ Greece,319,orange,green,green,?
 Czechia,295,orange,green,orange,?
 Finland,267,orange,green,green,?
 Slovenia,252,orange,green,green,?
-Israel,251,orange,green,green,?
-Estonia,204,orange,green,green,?
+Israel,251,orange,green,orange,?
+Estonia,204,orange,green,orange,?
 Brazil,199,orange,green,green,?
 Iceland,180,orange,green,green,?
 Ireland,167,orange,green,green,?
