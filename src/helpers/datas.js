@@ -12,6 +12,7 @@ export const getDeaths = (tab) => getCol(tab, 3)
 export const getRecovered = (tab) => getCol(tab, 4)
 export const getSick = (tab) => getCol(tab, 5)
 export const getNew = (tab) => getCol(tab, 6)
+export const getNewDeaths = (tab) => getCol(tab, 7)
 
 export const colorPalet = new Array('#ff4f81', '#ff6c5f', '#ffc168', '#2dde98', '#1cc7d0', '#00aeff', '#8e43e7')
 

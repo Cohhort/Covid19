@@ -82,6 +82,18 @@ const getLastEvolution = (array) => {
           <Chart datas={[data]} type='confirmed' country={true} />
         </div>
       </div>
+      <div class="w-full xl:w-1/2">
+        <div class="pb-4 lg:px-8">
+          <div class="flex items-center justify-between w-full mb-4">
+            <a href="/#global_confirmed"><h3 class="text-xl font-bold">New Deaths</h3></a>
+            <div class="{getLastEvolution(data.newDeaths) <= 0 ? 'text-cogreen' : 'text-cored'} {getLastEvolution(data.newDeaths) > 20 && 'font-bold'}">
+              {#if getLastEvolution(data.newDeaths) > 0}+{/if}
+              {getLastEvolution(data.newDeaths)}%
+            </div>
+          </div>
+          <Chart datas={[data]} type='newDeaths' country={true} />
+        </div>
+      </div>
     </div>
   </div>
 </div>

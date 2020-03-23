@@ -10,7 +10,8 @@ import {
 	getDeaths,
 	getRecovered,
 	getSick,
-	getNew
+	getNew,
+	getNewDeaths
 } from './helpers/datas.js'
 
 import Tailwindcss from './Tailwindcss.svelte'
@@ -43,7 +44,8 @@ onMount(async () => {
 			confirmed: getConfirmed(tab.filter(row=>row[0]==country)),
 			dead: getDeaths(tab.filter(row=>row[0]==country)),
 			recovered: getRecovered(tab.filter(row=>row[0]==country)),
-			new: getNew(tab.filter(row=>row[0]==country))
+			new: getNew(tab.filter(row=>row[0]==country)),
+			newDeaths: getNewDeaths(tab.filter(row=>row[0]==country))
     }
   })
 	
