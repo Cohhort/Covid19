@@ -49,19 +49,7 @@ const getLastEvolution = (array) => {
       <div class="w-full xl:w-1/2">
         <div class="pb-4 lg:px-8">
           <div class="flex items-center justify-between w-full mb-4">
-            <a href="/#global_recovered"><h3 class="text-xl font-bold">Recovered Cases</h3></a>
-            <div class="{getLastEvolution(data.recovered) > 0 ? 'text-cogreen' : 'text-cored'} {getLastEvolution(data.recovered) > 20 && 'font-bold'}">
-              {#if getLastEvolution(data.recovered) > 0}+{/if}
-              {getLastEvolution(data.recovered)}%
-            </div>
-          </div>
-          <Chart datas={[data]} type='recovered' country={true} />
-        </div>
-      </div>
-      <div class="w-full xl:w-1/2">
-        <div class="pb-4 lg:px-8">
-          <div class="flex items-center justify-between w-full mb-4">
-            <a href="/#global_dead"><h3 class="text-xl font-bold">Death Cases</h3></a>
+            <a href="/#global_dead"><h3 class="text-xl font-bold">Cumulated Death Cases</h3></a>
             <div class="{getLastEvolution(data.dead) <= 0 ? 'text-cogreen' : 'text-cored'} {getLastEvolution(data.dead) > 20 && 'font-bold'}">
               {#if getLastEvolution(data.dead) > 0}+{/if}
               {getLastEvolution(data.dead)}%
@@ -73,19 +61,7 @@ const getLastEvolution = (array) => {
       <div class="w-full xl:w-1/2">
         <div class="pb-4 lg:px-8">
           <div class="flex items-center justify-between w-full mb-4">
-            <a href="/#global_confirmed"><h3 class="text-xl font-bold">Confirmed Cases</h3></a>
-            <div class="{getLastEvolution(data.confirmed) <= 0 ? 'text-cogreen' : 'text-cored'} {getLastEvolution(data.confirmed) > 20 && 'font-bold'}">
-              {#if getLastEvolution(data.confirmed) > 0}+{/if}
-              {getLastEvolution(data.confirmed)}%
-            </div>
-          </div>
-          <Chart datas={[data]} type='confirmed' country={true} />
-        </div>
-      </div>
-      <div class="w-full xl:w-1/2">
-        <div class="pb-4 lg:px-8">
-          <div class="flex items-center justify-between w-full mb-4">
-            <a href="/#global_confirmed"><h3 class="text-xl font-bold">New Deaths</h3></a>
+            <a href="/#global_confirmed"><h3 class="text-xl font-bold">Deaths By Day</h3></a>
             <div class="{getLastEvolution(data.newDeaths) <= 0 ? 'text-cogreen' : 'text-cored'} {getLastEvolution(data.newDeaths) > 20 && 'font-bold'}">
               {#if getLastEvolution(data.newDeaths) > 0}+{/if}
               {getLastEvolution(data.newDeaths)}%
@@ -94,6 +70,9 @@ const getLastEvolution = (array) => {
           <Chart datas={[data]} type='newDeaths' country={true} />
         </div>
       </div>
+      
+      
+      
     </div>
   </div>
 </div>

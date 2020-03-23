@@ -58,9 +58,9 @@ onMount(async () => {
 <main>
 	<Menu />
 	<ChartSick {datas} />
-	<ChartConfirmed {datas} />
+	
 	<ChartDead {datas} />
-	<ChartRecovered {datas} />
+	
 	<ChartNew {datas} />
 	{#if datas.length > 0}
 		{#each datas as data, i}
