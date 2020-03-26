@@ -2,7 +2,7 @@
 import Chart from './Chart.svelte';
 
 export let data
-console.log('data',data)
+//console.log('data',data)
 
 const getLastEvolution = (array) => {
   return Math.round((array[array.length-1]-array[array.length-2])/array[array.length-2]*10000)/100

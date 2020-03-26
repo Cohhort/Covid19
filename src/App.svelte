@@ -11,7 +11,8 @@ import {
 	getRecovered,
 	getSick,
 	getNew,
-	getNewDeaths
+	getNewDeaths,
+	getCountry
 } from './helpers/datas.js'
 
 import Tailwindcss from './Tailwindcss.svelte'
@@ -34,34 +35,40 @@ onMount(async () => {
 	let colorsBg = getArrayColor(countries.length, colorPalet, 0.5)
 
   datas = countries.map((country,i)=>{
-		let countr = country.toLowerCase().includes('iran') ? 'Iran' : country.toLowerCase().includes('korea') ? 'Korea' : country
+		let countr = country.toLowerCase().includes('iran') ? 'Iran' : country.toLowerCase().includes('korea') ? 'Korea' : country;
+		let tabcountry = getCountry(tab,country);
+		console.log("datescountry",country,getDates(tabcountry));
     return {
-			dates: getDates(tab),
+			dates: getDates(tabcountry),
 			country: countr,
 			color: colors[i],
 			colorBg: colorsBg[i],
-			sick: getSick(tab.filter(row=>row[0]==country)),
-			confirmed: getConfirmed(tab.filter(row=>row[0]==country)),
-			dead: getDeaths(tab.filter(row=>row[0]==country)),
-			recovered: getRecovered(tab.filter(row=>row[0]==country)),
-			new: getNew(tab.filter(row=>row[0]==country)),
-			newDeaths: getNewDeaths(tab.filter(row=>row[0]==country))
+			sick: getSick(tabcountry),
+			confirmed: getConfirmed(tabcountry),
+			dead: getDeaths(tabcountry),
+			recovered: getRecovered(tabcountry),
+			new: getNew(tabcountry),
+			newDeaths: getNewDeaths(tabcountry)
     }
   })
 	
   console.log('datas general',datas)
 })
+
+/*
+<ChartSick {datas} />
+	<ChartNew {datas} />
+	<ChartDead {datas} />*/
+
 </script>
 
 <Tailwindcss />
 
 <main>
 	<Menu />
-	<ChartSick {datas} />
 	
-	<ChartDead {datas} />
 	
-	<ChartNew {datas} />
+	
 	{#if datas.length > 0}
 		{#each datas as data, i}
 			<ChartCountry {data} />

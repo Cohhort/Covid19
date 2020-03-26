@@ -29,6 +29,8 @@
         var getRecovered = (tab) => getCol(tab, 4);
         var getSick = (tab) => getCol(tab, 5);
         var getNew = (tab) => getCol(tab, 6);
+        window.tab = tab;
+        window.getCountry = (tab, country) => tab.filter(row=> row[0]=="country"||row[0]==country);
         
         console.log(getDates(tab));
         console.log(getCountries(tab));

@@ -7,7 +7,7 @@ export let type
 export let country = false
 let selector = ''
 
-console.log('datas Chart.svelte',datas, type)
+//console.log('datas Chart.svelte',datas, type)
 
 selector = !country ? 'chart_'+type : String('chart_'+type+'_'+datas[0].country.substring(0, 12).toLowerCase())
 console.log('selector Chart.svelte',selector)
