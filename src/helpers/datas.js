@@ -2,7 +2,7 @@ import gradstop from 'gradstop'
 import rgba from 'color-rgba'
 
 export const getColUniques = (tab,i) => {let t = {}; tab.map( row=> row[0] == "country" || !row[1] ? "" : t[row[i]]=1); return Object.keys(t)}
-export const getCol = (tab,i) => tab.map( row => row[0] == "country" || !row[0] ? "" : row[i])
+export const getCol = (tab,i) => tab.filter(row=> row[0] != "country" && row[0] ).map( row => row[i])
 
 export const getDates = (tab) => getColUniques(tab, 1)
 export const getCountries = (tab) => getColUniques(tab, 0)

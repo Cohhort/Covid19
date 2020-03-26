@@ -57,7 +57,7 @@ onMount(async () => {
 
 /*
 <ChartSick {datas} />
-	<ChartNew {datas} />
+	<ChartNew {datas} />	
 	<ChartDead {datas} />*/
 
 </script>
