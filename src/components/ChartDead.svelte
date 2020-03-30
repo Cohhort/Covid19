@@ -4,7 +4,8 @@ import { onMount } from "svelte";
 import Chart from './Chart.svelte';
 
 export let datas
-let type = 'dead'
+//let type = 'dead'
+let type = 'newDeaths'
 
 const getLastEvolution = (array) => {
   return Math.round((array[array.length-1]-array[array.length-2])/array[array.length-2]*10000)/100
@@ -16,7 +17,7 @@ const getLastEvolution = (array) => {
     <div class="max-w-screen-xl px-4 mx-auto my-10 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
       <div class="sm:text-center lg:text-left">
         <h2 class="mb-24 text-4xl font-bold leading-10 tracking-tight text-gray-800 font-display sm:text-5xl sm:leading-none md:text-52xl">
-          Evolution of <span class="text-coorange">Cumulated Death Cases</span> over the world
+          Evolution of <span class="text-coorange">Daily Death Cases</span> over the world
         </h2>
         <!-- <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
           Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.

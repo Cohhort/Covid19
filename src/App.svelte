@@ -67,7 +67,7 @@ onMount(async () => {
 <main>
 	<Menu />
 	
-	
+	<ChartDead {datas} />
 	
 	{#if datas.length > 0}
 		{#each datas as data, i}
