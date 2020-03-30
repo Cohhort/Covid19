@@ -12,6 +12,7 @@ import {
 	getSick,
 	getNew,
 	getNewDeaths,
+	getNewDeaths7,
 	getCountry,
 	getDataTrend
 } from './helpers/datas.js'
@@ -57,7 +58,8 @@ onMount(async () => {
 			dead: getDeaths(tabcountry),
 			recovered: getRecovered(tabcountry),
 			new: getNew(tabcountry),
-			newDeaths: getNewDeaths(tabcountry)
+			newDeaths: getNewDeaths(tabcountry),
+			newDeaths7: getNewDeaths7(tabcountry)
     }
   })
 	

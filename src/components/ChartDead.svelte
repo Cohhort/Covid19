@@ -5,7 +5,7 @@ import Chart from './Chart.svelte';
 
 export let datas
 //let type = 'dead'
-let type = 'newDeaths'
+let type = 'newDeaths7'
 
 const getLastEvolution = (array) => {
   return Math.round((array[array.length-1]-array[array.length-2])/array[array.length-2]*10000)/100
