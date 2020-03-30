@@ -23,6 +23,7 @@ import ChartRecovered from './components/ChartRecovered.svelte'
 import ChartSick from './components/ChartSick.svelte'
 import ChartNew from './components/ChartNew.svelte'
 import ChartCountry from './components/ChartCountry.svelte'
+import ChartTrend from './components/ChartTrend.svelte'
 import Footer from './components/Footer.svelte'
 
 let datas = []
@@ -68,6 +69,7 @@ onMount(async () => {
 	<Menu />
 	
 	<ChartDead {datas} />
+	<ChartTrend  />
 	
 	{#if datas.length > 0}
 		{#each datas as data, i}

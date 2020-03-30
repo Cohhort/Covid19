@@ -1,0 +1,248 @@
+<html>
+
+<head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<style type="text/css" src="brutes.csv"></style>
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+<style>
+    #chartdiv {
+  width: 100%;
+  height: 500px;
+}
+</style>
+</head>
+
+
+<body>
+    <div class="chart-container" style="position: relative; height:40vh; width:80vw">
+        <div id="chartdiv"></div>
+    </div>
+<script>
+    fetch("https://covid19.cohhort.com/data/mains_enrichis.csv").then(function(response) {
+        return response.ok ? response.text() : console.log("raté");
+    }).then(function(text) {
+        console.log(text);
+        
+        window. tab = text.split("\n").map(row=>row.split(','))
+        
+        window.getColUniques = (tab,i) => {let t = {}; tab.map( row=> row[0] == "country" || !row[1] || row[0] == "country_alt" ? "" : t[row[i]]=1); return Object.keys(t)}
+        window.getCol = (tab,i) => tab.map( row => row[0] == "country" || !row[0] ? "" : row[i]);
+        window.getDates = (tab) => getColUniques(tab, 1);
+        window. getCountries = (tab) => getColUniques(tab, 0);
+        window. getConfirmed = (tab) => getCol(tab, 2);
+        window. getDeaths = (tab) => getCol(tab, 3);
+        window. getRecovered = (tab) => getCol(tab, 4);
+        window. getSick = (tab) => getCol(tab, 5);
+        window. getNew = (tab) => getCol(tab, 6);
+        window.tab = tab;
+        window.getCountry = (tab, country) => tab.filter(row=> row[0]=="country"||row[0]==country);
+        
+        //console.log(getDates(tab));
+        //console.log(getCountries(tab));
+        //console.log(getDeaths(tab));
+        
+        
+        var getDeathsM3 = function(tab){
+            var temp = tab.filter(row=>row[0] && row[0]!="country").map(row=>parseInt(row[8])).filter(e=>e);
+            temp = Array.from(new Set(temp));
+            return temp.sort((a, b) => a-b);
+        }
+        
+        //window. data = getDeathsM3(tab).map( function(x) {return {x:x};});
+        temp = {}
+        getDeathsM3(tab).map( x => temp[x]={});
+        getCountries(tab).map(function(country){
+            getCountry(tab,country).map(function(row){
+                var x = parseInt(row[8]);
+                
+                if (x) {
+                    y = parseFloat(row[14]);
+                    if(y)  temp[x][country] = y;
+                }
+            });
+        });
+        window.data = Object.keys(temp).map(function(x){
+            t = temp[x];
+            t.x = parseInt(x);
+            return t;
+        });
+        
+        console.log(getCountries(tab))
+
+        //--------------------------
+        am4core.useTheme(am4themes_animated);
+        // Create chart instance
+window.chart = am4core.create("chartdiv", am4charts.XYChart);
+
+// Add data
+/*chart.data = [{
+  "date": "2012-03-01",
+  "price": 20,
+  "price2":30
+}, {
+  "date": "2012-03-02",
+  "price": 75,
+  "price2":30
+}, {
+  "date": "2012-03-03",
+  "price": 15
+}, {
+  "date": "2012-03-04",
+  "price": 75,
+  "price2":30
+}, {
+  "date": "2012-03-05",
+  "price": 158,
+  "price2":30
+}, {
+  "date": "2012-03-06",
+  "price": 57,
+  "price2":30
+}, {
+  "date": "2012-03-07",
+  "price": 107,
+  "price2":30
+}, {
+  "date": "2012-03-08",
+  
+  "price2":30
+}, {
+  "date": "2012-03-09",
+  
+  "price2":30
+}, {
+  "date": "2012-03-10",
+  "price": 132,
+  "price2":30
+}, {
+  "date": "2012-03-11",
+  
+  "price2":30
+}, {
+  "date": "2012-03-12",
+  "price": 56,
+  
+}, {
+  "date": "2012-03-13",
+  "price": 169,
+  "price2":30
+}, {
+  "date": "2012-03-14",
+  "price": 24,
+  "price2":30
+}, {
+  "date": "2012-03-15",
+  "price": 147,
+  "price2":30
+}];*/
+chart.data = window.data;
+
+// Create axes
+var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+dateAxis.renderer.grid.template.disabled = true;
+dateAxis.renderer.labels.template.disabled = true;
+//dateAxis.renderer.grid.template.location = 0;
+//dateAxis.renderer.minGridDistance = 50;
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.logarithmic = false;
+valueAxis.renderer.grid.template.disabled = true;
+//valueAxis.renderer.minGridDistance = 20;
+
+
+
+
+
+// Create series
+getCountries(tab).map(function(country){
+    var series = chart.series.push(new am4charts.LineSeries());
+    series.dataFields.valueY = country;
+    series.dataFields.dateX = "x";
+    series.tensionX = 0.8;
+    series.strokeWidth = 2;
+    series.name = country;
+
+    var segment = series.segments.template;
+    segment.interactionsEnabled = true;
+
+    var hoverState = segment.states.create("hover");
+    hoverState.properties.strokeWidth = 3;
+
+    var dimmed = segment.states.create("dimmed");
+    dimmed.properties.stroke = am4core.color("#dadada");
+
+    segment.events.on("over", function(event) {
+    processOver(event.target.parent.parent.parent);
+    });
+
+    segment.events.on("out", function(event) {
+    processOut(event.target.parent.parent.parent);
+    });
+
+})
+
+/*var bullet = series.bullets.push(new am4charts.CircleBullet());
+bullet.circle.fill = am4core.color("#fff");
+bullet.circle.strokeWidth = 3;*/
+
+
+
+chart.legend = new am4charts.Legend();
+chart.legend.position = "right";
+chart.legend.scrollable = true;
+chart.legend.itemContainers.template.events.on("over", function(event) {
+  processOver(event.target.dataItem.dataContext);
+})
+
+chart.legend.itemContainers.template.events.on("out", function(event) {
+  processOut(event.target.dataItem.dataContext);
+})
+
+function processOver(hoveredSeries) {
+  hoveredSeries.toFront();
+
+  hoveredSeries.segments.each(function(segment) {
+    segment.setState("hover");
+  })
+
+  chart.series.each(function(series) {
+    if (series != hoveredSeries) {
+      series.segments.each(function(segment) {
+        segment.setState("dimmed");
+      })
+      series.bulletsContainer.setState("dimmed");
+    }
+  });
+}
+
+function processOut(hoveredSeries) {
+  chart.series.each(function(series) {
+    series.segments.each(function(segment) {
+      segment.setState("default");
+    })
+    series.bulletsContainer.setState("default");
+  });
+}
+
+
+
+
+
+
+
+// Add scrollbar
+chart.scrollbarX = new am4core.Scrollbar();
+
+
+      
+      });
+    
+    
+</script>
+
+
+</body>
+</html>
