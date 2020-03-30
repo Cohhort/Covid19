@@ -17,7 +17,7 @@
 
 
 <body>
-    <div class="chart-container" style="position: relative; height:40vh; width:80vw">
+    <div class="chart-container" style="position: relative; height:500px; width:100%">
         <div id="chartdiv"></div>
     </div>
 <script>
@@ -51,8 +51,8 @@
             return temp.sort((a, b) => a-b);
         }
         
-        //window. data = getDeathsM3(tab).map( function(x) {return {x:x};});
-        temp = {}
+        //prepare data
+        var temp = {}
         getDeathsM3(tab).map( x => temp[x]={});
         getCountries(tab).map(function(country){
             getCountry(tab,country).map(function(row){
@@ -64,179 +64,93 @@
                 }
             });
         });
-        window.data = Object.keys(temp).map(function(x){
+        datatrend = Object.keys(temp).map(function(x){
             t = temp[x];
             t.x = parseInt(x);
             return t;
         });
-        
-        console.log(getCountries(tab))
 
         //--------------------------
         am4core.useTheme(am4themes_animated);
         // Create chart instance
-window.chart = am4core.create("chartdiv", am4charts.XYChart);
+        chart = am4core.create("chartdiv", am4charts.XYChart);
+        chart.data = datatrend;
 
-// Add data
-/*chart.data = [{
-  "date": "2012-03-01",
-  "price": 20,
-  "price2":30
-}, {
-  "date": "2012-03-02",
-  "price": 75,
-  "price2":30
-}, {
-  "date": "2012-03-03",
-  "price": 15
-}, {
-  "date": "2012-03-04",
-  "price": 75,
-  "price2":30
-}, {
-  "date": "2012-03-05",
-  "price": 158,
-  "price2":30
-}, {
-  "date": "2012-03-06",
-  "price": 57,
-  "price2":30
-}, {
-  "date": "2012-03-07",
-  "price": 107,
-  "price2":30
-}, {
-  "date": "2012-03-08",
-  
-  "price2":30
-}, {
-  "date": "2012-03-09",
-  
-  "price2":30
-}, {
-  "date": "2012-03-10",
-  "price": 132,
-  "price2":30
-}, {
-  "date": "2012-03-11",
-  
-  "price2":30
-}, {
-  "date": "2012-03-12",
-  "price": 56,
-  
-}, {
-  "date": "2012-03-13",
-  "price": 169,
-  "price2":30
-}, {
-  "date": "2012-03-14",
-  "price": 24,
-  "price2":30
-}, {
-  "date": "2012-03-15",
-  "price": 147,
-  "price2":30
-}];*/
-chart.data = window.data;
+        // Create axes
+        var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+        dateAxis.renderer.grid.template.disabled = true;
+        dateAxis.renderer.labels.template.disabled = true;
 
-// Create axes
-var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
-dateAxis.renderer.grid.template.disabled = true;
-dateAxis.renderer.labels.template.disabled = true;
-//dateAxis.renderer.grid.template.location = 0;
-//dateAxis.renderer.minGridDistance = 50;
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.logarithmic = false;
+        valueAxis.renderer.grid.template.disabled = true;
 
-var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-valueAxis.logarithmic = false;
-valueAxis.renderer.grid.template.disabled = true;
-//valueAxis.renderer.minGridDistance = 20;
+        // Create series
+        getCountries(tab).map(function(country){
+            var series = chart.series.push(new am4charts.LineSeries());
+            series.dataFields.valueY = country;
+            series.dataFields.dateX = "x";
+            series.tensionX = 0.8;
+            series.strokeWidth = 2;
+            series.name = country;
 
+            var segment = series.segments.template;
+            segment.interactionsEnabled = true;
 
+            var hoverState = segment.states.create("hover");
+            hoverState.properties.strokeWidth = 3;
 
+            var dimmed = segment.states.create("dimmed");
+            dimmed.properties.stroke = am4core.color("#dadada");
 
+            segment.events.on("over", function(event) {
+            processOver(event.target.parent.parent.parent);
+            });
 
-// Create series
-getCountries(tab).map(function(country){
-    var series = chart.series.push(new am4charts.LineSeries());
-    series.dataFields.valueY = country;
-    series.dataFields.dateX = "x";
-    series.tensionX = 0.8;
-    series.strokeWidth = 2;
-    series.name = country;
+            segment.events.on("out", function(event) {
+            processOut(event.target.parent.parent.parent);
+            });
+        })
 
-    var segment = series.segments.template;
-    segment.interactionsEnabled = true;
+        chart.legend = new am4charts.Legend();
+        chart.legend.position = "right";
+        chart.legend.scrollable = true;
+        chart.legend.itemContainers.template.events.on("over", function(event) {
+        processOver(event.target.dataItem.dataContext);
+        })
 
-    var hoverState = segment.states.create("hover");
-    hoverState.properties.strokeWidth = 3;
+        chart.legend.itemContainers.template.events.on("out", function(event) {
+        processOut(event.target.dataItem.dataContext);
+        })
 
-    var dimmed = segment.states.create("dimmed");
-    dimmed.properties.stroke = am4core.color("#dadada");
+        function processOver(hoveredSeries) {
+        hoveredSeries.toFront();
 
-    segment.events.on("over", function(event) {
-    processOver(event.target.parent.parent.parent);
-    });
+        hoveredSeries.segments.each(function(segment) {
+            segment.setState("hover");
+        })
 
-    segment.events.on("out", function(event) {
-    processOut(event.target.parent.parent.parent);
-    });
+        chart.series.each(function(series) {
+            if (series != hoveredSeries) {
+            series.segments.each(function(segment) {
+                segment.setState("dimmed");
+            })
+            series.bulletsContainer.setState("dimmed");
+            }
+        });
+        }
 
-})
+        function processOut(hoveredSeries) {
+        chart.series.each(function(series) {
+            series.segments.each(function(segment) {
+            segment.setState("default");
+            })
+            series.bulletsContainer.setState("default");
+        });
+        }
 
-/*var bullet = series.bullets.push(new am4charts.CircleBullet());
-bullet.circle.fill = am4core.color("#fff");
-bullet.circle.strokeWidth = 3;*/
-
-
-
-chart.legend = new am4charts.Legend();
-chart.legend.position = "right";
-chart.legend.scrollable = true;
-chart.legend.itemContainers.template.events.on("over", function(event) {
-  processOver(event.target.dataItem.dataContext);
-})
-
-chart.legend.itemContainers.template.events.on("out", function(event) {
-  processOut(event.target.dataItem.dataContext);
-})
-
-function processOver(hoveredSeries) {
-  hoveredSeries.toFront();
-
-  hoveredSeries.segments.each(function(segment) {
-    segment.setState("hover");
-  })
-
-  chart.series.each(function(series) {
-    if (series != hoveredSeries) {
-      series.segments.each(function(segment) {
-        segment.setState("dimmed");
-      })
-      series.bulletsContainer.setState("dimmed");
-    }
-  });
-}
-
-function processOut(hoveredSeries) {
-  chart.series.each(function(series) {
-    series.segments.each(function(segment) {
-      segment.setState("default");
-    })
-    series.bulletsContainer.setState("default");
-  });
-}
-
-
-
-
-
-
-
-// Add scrollbar
-chart.scrollbarX = new am4core.Scrollbar();
-
-
+        // Add scrollbar
+        chart.scrollbarX = new am4core.Scrollbar();
       
       });
     

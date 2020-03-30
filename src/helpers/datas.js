@@ -46,3 +46,33 @@ export const fetchDatas = async (fileName) => {
   return results.filter(row=>row && row[0] && row[1]).map(row=>{row[1] = row[1].split("/").reverse().join('/'); return row;});
 }
 
+
+
+export const getDataTrend = function (tab_enrichi){
+    var tab = tab_enrichi;
+    var getDeathsM3 = function(tab){
+      var temp = tab.filter(row=>row[0] && row[0]!="country").map(row=>parseInt(row[8])).filter(e=>e);
+      temp = Array.from(new Set(temp));
+      return temp.sort((a, b) => a-b);
+    }
+
+    var temp = {}
+    getDeathsM3(tab).map( x => temp[x]={});
+    getCountries(tab).map(function(country){
+      getCountry(tab,country).map(function(row){
+          var x = parseInt(row[8]);
+          
+          if (x) {
+              var y = parseFloat(row[14]);
+              if(y)  temp[x][country] = y;
+          }
+      });
+    });
+    return Object.keys(temp).map(function(x){
+      var t = temp[x];
+      t.x = parseInt(x);
+      return t;
+    });
+}
+
+

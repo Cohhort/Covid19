@@ -12,7 +12,8 @@ import {
 	getSick,
 	getNew,
 	getNewDeaths,
-	getCountry
+	getCountry,
+	getDataTrend
 } from './helpers/datas.js'
 
 import Tailwindcss from './Tailwindcss.svelte'
@@ -27,11 +28,18 @@ import ChartTrend from './components/ChartTrend.svelte'
 import Footer from './components/Footer.svelte'
 
 let datas = []
+let datatrend = []
+let countriesEnrichi = []
+//let getCountries = null
+console.log("00000")
 
 onMount(async () => {
 	let tab = await fetchDatas('brutes.csv')
+	let tab_enrichi = await fetchDatas('mains_enrichis.csv')
 	
 	let countries = getCountries(tab)
+	countriesEnrichi = getCountries(tab_enrichi)
+	console.log("111111",countriesEnrichi)
 	let colors = getArrayColor(countries.length, colorPalet, 1)
 	let colorsBg = getArrayColor(countries.length, colorPalet, 0.5)
 
@@ -69,7 +77,7 @@ onMount(async () => {
 	<Menu />
 	
 	<ChartDead {datas} />
-	<ChartTrend  />
+	<ChartTrend {datatrend} {countriesEnrichi} />
 	
 	{#if datas.length > 0}
 		{#each datas as data, i}
