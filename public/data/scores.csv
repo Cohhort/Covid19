@@ -1,203 +1,203 @@
 country,sicks,sicks_score,new cases,new cases trend,confidence in data
-US,118380.0,red,red,orange,orange
-Italy,70065.0,red,red,orange,orange
-Spain,54968.0,red,red,green,orange
-Germany,48781.0,red,red,orange,orange
-France,30064.0,red,red,orange,orange
-Iran,21212.0,red,red,orange,orange
-UK,16140.0,red,red,orange,orange
-Switzerland,12282.0,red,red,orange,green
-Netherlands,9173.0,red,red,orange,red
-Austria,7978.0,red,red,green,green
-Belgium,7718.0,red,red,orange,orange
-Turkey,7224.0,red,red,red,orange
+US,135754.0,red,red,orange,orange
+Italy,73880.0,red,red,orange,orange
+Spain,58598.0,red,red,green,orange
+Germany,52351.0,red,red,green,orange
+France,30871.0,red,red,orange,orange
+Iran,23278.0,red,red,orange,orange
+UK,18398.0,red,red,orange,orange
+Switzerland,12934.0,red,red,orange,green
+Netherlands,9905.0,red,red,orange,orange
+Belgium,9046.0,red,red,orange,orange
+Turkey,8981.0,red,red,orange,orange
+Austria,8223.0,red,red,green,green
 Republic of Korea,7212.0,red,red,?,?
-Canada,5049.0,red,red,orange,orange
-Portugal,5027.0,red,red,orange,orange
+Portugal,5800.0,red,red,orange,orange
+Canada,5750.0,red,red,orange,orange
 Iran (Islamic Republic of),5020.0,red,red,?,?
-South Korea,4523.0,orange,orange,orange,green
-Norway,3985.0,orange,orange,orange,green
-Brazil,3787.0,orange,orange,orange,orange
-Israel,3518.0,orange,orange,orange,green
-Australia,3382.0,orange,orange,orange,green
-Sweden,3326.0,orange,orange,orange,orange
-Czechia,2609.0,orange,orange,orange,green
-China-Hubei,2526.0,orange,green,green,green
-Ireland,2374.0,orange,orange,orange,green
-Denmark,2244.0,orange,orange,orange,green
-Malaysia,1973.0,orange,orange,green,green
-Chile,1842.0,orange,orange,orange,green
-Luxembourg,1773.0,orange,orange,orange,green
-Ecuador,1772.0,orange,orange,orange,orange
-Poland,1613.0,orange,orange,orange,green
-Pakistan,1454.0,orange,orange,orange,green
-Romania,1276.0,orange,orange,orange,orange
-Japan,1237.0,orange,orange,orange,green
-Russia,1211.0,orange,orange,orange,green
-Saudi Arabia,1162.0,orange,green,green,green
-South Africa,1155.0,orange,orange,green,green
-Finland,1148.0,orange,orange,orange,green
-Thailand,1142.0,orange,orange,orange,green
-China-not-Hubei,1074.0,orange,orange,orange,green
-Indonesia,994.0,orange,orange,orange,orange
-Greece,977.0,orange,green,orange,green
-Philippines,972.0,orange,orange,red,orange
-India,879.0,orange,orange,orange,orange
-Iceland,847.0,orange,green,orange,green
-Panama,770.0,orange,orange,orange,green
-Mexico,701.0,orange,orange,red,green
-Dominican Republic,688.0,orange,orange,orange,red
-Slovenia,665.0,orange,green,orange,green
-Serbia,649.0,orange,orange,red,green
-Peru,639.0,orange,green,green,green
-Estonia,624.0,orange,green,green,green
-Croatia,607.0,orange,green,orange,green
-Singapore,602.0,orange,green,orange,green
-Argentina,600.0,orange,green,orange,orange
-Colombia,592.0,orange,green,orange,green
-Qatar,544.0,orange,green,green,green
-Egypt,419.0,orange,green,green,orange
-United Arab Emirates,414.0,orange,green,orange,green
-New Zealand,401.0,orange,green,orange,red
-Algeria,394.0,orange,green,green,orange
-Lithuania,386.0,orange,green,orange,green
-Armenia,376.0,orange,green,red,green
-Lebanon,374.0,orange,green,green,green
-Morocco,366.0,orange,green,orange,orange
-Ukraine,342.0,orange,green,orange,red
-Iraq,333.0,orange,green,red,orange
-Bulgaria,313.0,orange,green,orange,green
-Andorra,304.0,orange,green,orange,?
-Latvia,304.0,orange,green,orange,?
-Hungary,298.0,orange,green,orange,orange
-Slovakia,290.0,orange,green,red,?
-Costa Rica,290.0,orange,green,orange,?
-Uruguay,274.0,orange,green,green,?
-Tunisia,268.0,orange,green,orange,orange
-Taiwan*,251.0,orange,green,green,green
-Bosnia and Herzegovina,248.0,orange,green,red,?
-North Macedonia,234.0,orange,green,green,?
-Moldova,227.0,orange,green,green,?
-Jordan,227.0,orange,green,green,red
-Kazakhstan,211.0,orange,green,red,red
-Bahrain,207.0,orange,green,green,green
+South Korea,4398.0,orange,orange,orange,green
+Norway,4252.0,orange,orange,green,green
+Brazil,4114.0,orange,orange,orange,orange
+Israel,4100.0,orange,red,red,green
+Australia,3724.0,orange,orange,orange,green
+Sweden,3574.0,orange,orange,orange,green
+Czechia,2790.0,orange,orange,green,green
+Ireland,2564.0,orange,orange,green,green
+Denmark,2419.0,orange,orange,orange,green
+Chile,2057.0,orange,orange,orange,green
+China-Hubei,2049.0,orange,green,green,green
+Malaysia,2047.0,orange,orange,green,green
+Luxembourg,1889.0,orange,orange,orange,green
+Ecuador,1863.0,orange,orange,green,orange
+Poland,1833.0,orange,orange,orange,green
+Romania,1566.0,orange,orange,orange,orange
+Pakistan,1554.0,orange,orange,green,green
+Russia,1462.0,orange,orange,orange,green
+Japan,1388.0,orange,orange,red,green
+Philippines,1305.0,orange,orange,red,orange
+Thailand,1284.0,orange,orange,orange,green
+South Africa,1247.0,orange,green,green,green
+Saudi Arabia,1225.0,orange,green,orange,green
+Finland,1219.0,orange,green,orange,green
+China-not-Hubei,1187.0,orange,orange,orange,green
+Indonesia,1107.0,orange,orange,orange,orange
+Greece,1066.0,orange,green,orange,green
+India,902.0,orange,green,green,green
+Iceland,883.0,orange,green,green,green
+Panama,880.0,orange,orange,orange,green
+Mexico,828.0,orange,orange,orange,green
+Peru,818.0,orange,orange,orange,green
+Dominican Republic,817.0,orange,orange,orange,red
+Serbia,728.0,orange,orange,red,green
+Slovenia,709.0,orange,green,orange,green
+Colombia,682.0,orange,green,red,green
+Estonia,656.0,orange,green,green,green
+Croatia,655.0,orange,green,green,green
+Argentina,654.0,orange,green,green,orange
+Singapore,629.0,orange,green,orange,green
+Qatar,585.0,orange,green,red,green
+United Arab Emirates,509.0,orange,green,red,green
+Ukraine,459.0,orange,green,orange,red
+New Zealand,457.0,orange,green,green,red
+Lithuania,452.0,orange,green,orange,green
+Algeria,449.0,orange,green,orange,orange
+Morocco,440.0,orange,green,orange,orange
+Egypt,437.0,orange,green,orange,orange
+Lebanon,398.0,orange,green,green,green
+Armenia,391.0,orange,green,orange,green
+Iraq,362.0,orange,green,green,orange
+Hungary,361.0,orange,green,orange,orange
+Latvia,346.0,orange,green,orange,?
+Andorra,327.0,orange,green,green,green
+Bulgaria,324.0,orange,green,green,green
+Slovakia,312.0,orange,green,green,?
+Bosnia and Herzegovina,309.0,orange,green,orange,green
+Costa Rica,309.0,orange,green,green,?
+Uruguay,303.0,orange,green,orange,?
+Tunisia,302.0,orange,green,orange,orange
+Taiwan*,266.0,orange,green,green,green
+Kazakhstan,263.0,orange,green,red,red
+Moldova,259.0,orange,green,orange,?
+North Macedonia,250.0,orange,green,green,green
+Jordan,238.0,orange,green,green,red
+Bahrain,223.0,orange,green,green,green
 San Marino,196.0,orange,green,green,red
-Burkina Faso,175.0,orange,green,green,red
-Kuwait,171.0,orange,green,green,green
-Azerbaijan,163.0,orange,green,orange,green
-Cyprus,159.0,orange,green,green,green
-Albania,156.0,orange,green,green,orange
-Vietnam,153.0,orange,green,green,green
-Malta,147.0,orange,green,green,?
+Cyprus,194.0,orange,green,green,green
+Azerbaijan,190.0,orange,green,green,green
+Kuwait,188.0,orange,green,green,green
+Burkina Faso,187.0,orange,green,green,orange
+Albania,169.0,orange,green,green,orange
+Vietnam,163.0,orange,green,green,green
+Cote d'Ivoire,160.0,orange,green,red,?
+Malta,149.0,orange,green,green,?
+Ghana,145.0,orange,green,green,?
+Oman,144.0,orange,green,green,green
 Cruise Ship,137.0,orange,green,green,green
-Ghana,134.0,orange,green,green,?
-Oman,129.0,orange,green,green,green
-Cuba,112.0,orange,green,green,?
-Senegal,112.0,orange,green,green,green
-Diamond Princess,105.0,orange,green,green,green
-Afghanistan,104.0,orange,green,green,?
-Sri Lanka,103.0,orange,green,green,?
-Mauritius,100.0,orange,green,green,?
-Cote d'Ivoire,98.0,green,green,green,?
-Uzbekistan,97.0,green,green,green,?
-Brunei,94.0,green,green,green,green
-Honduras,91.0,green,green,green,?
-Kosovo,89.0,green,green,green,?
-Cameroon,87.0,green,green,green,?
-Cambodia,86.0,green,green,green,red
-Nigeria,85.0,green,green,green,?
-Montenegro,83.0,green,green,green,?
-West Bank and Gaza,79.0,green,green,green,?
+Uzbekistan,135.0,orange,green,green,?
+Cuba,132.0,orange,green,green,?
+Cameroon,128.0,orange,green,green,orange
+Senegal,115.0,orange,green,green,green
+Afghanistan,114.0,orange,green,green,?
+Nigeria,107.0,orange,green,green,?
+Sri Lanka,105.0,orange,green,green,green
+Honduras,104.0,orange,green,green,?
+Mauritius,104.0,orange,green,green,?
+Diamond Princess,99.0,green,green,green,green
+Kosovo,92.0,green,green,green,?
+Brunei,91.0,green,green,green,green
+West Bank and Gaza,90.0,green,green,green,?
+Kyrgyzstan,84.0,green,green,green,?
+Montenegro,84.0,green,green,green,?
+Cambodia,82.0,green,green,green,red
+Bolivia,80.0,green,green,green,?
 Venezuela,78.0,green,green,green,red
-Georgia,76.0,green,green,green,green
-Bolivia,74.0,green,green,green,?
-Trinidad and Tobago,70.0,green,green,green,?
+Trinidad and Tobago,74.0,green,green,green,?
+Georgia,73.0,green,green,green,green
+Rwanda,70.0,green,green,green,?
 Belarus,62.0,green,green,green,green
 Others,61.0,green,red,?,?
-Rwanda,60.0,green,green,green,?
-Kyrgyzstan,58.0,green,green,green,?
 Congo (Kinshasa),57.0,green,green,green,red
 Liechtenstein,56.0,green,green,green,?
-Hong Kong,53.0,green,green,green,green
+Paraguay,55.0,green,green,green,?
 Guadeloupe,53.0,green,green,green,?
+Hong Kong,53.0,green,green,green,green
 Hong Kong SAR,52.0,green,red,?,?
-Paraguay,52.0,green,green,green,?
 Reunion,45.0,green,green,green,?
+Monaco,44.0,green,green,green,?
 Czech Republic,41.0,green,green,green,?
-Monaco,41.0,green,green,green,?
-Kenya,36.0,green,green,green,?
+Kenya,40.0,green,green,green,?
+Madagascar,39.0,green,green,green,?
+Barbados,33.0,green,green,green,?
+Uganda,33.0,green,green,green,?
 Martinique,31.0,green,green,green,?
-Uganda,30.0,green,green,green,?
-Taipei and environs,29.0,green,red,?,?
+Zambia,29.0,green,green,green,?
 Taiwan,29.0,green,green,green,green
-Zambia,28.0,green,green,green,?
+Taipei and environs,29.0,green,red,?,?
+Jamaica,29.0,green,green,green,?
 Bangladesh,28.0,green,green,green,red
-Jamaica,27.0,green,green,green,?
-Madagascar,26.0,green,green,green,?
-Barbados,26.0,green,green,green,?
-Togo,23.0,green,green,green,?
+El Salvador,24.0,green,green,green,?
 Guatemala,23.0,green,green,green,?
+Togo,23.0,green,green,green,?
 Palestine,22.0,green,green,green,?
 Republic of Ireland,21.0,green,red,?,?
-El Salvador,19.0,green,green,green,?
-Mali,18.0,green,green,green,?
-Ethiopia,15.0,green,green,green,?
+Ethiopia,20.0,green,green,green,?
+Congo (Brazzaville),19.0,green,green,green,?
+Djibouti,18.0,green,green,green,?
+Niger,17.0,green,green,green,?
+Mali,17.0,green,green,green,?
+Guinea,16.0,green,green,green,?
 Viet Nam,15.0,green,red,?,?
-Djibouti,14.0,green,green,green,?
+Haiti,14.0,green,green,green,?
 Tanzania,13.0,green,green,green,?
+Equatorial Guinea,12.0,green,green,green,?
+Eritrea,12.0,green,green,green,?
 French Guiana,12.0,green,green,green,?
 Mongolia,12.0,green,green,green,?
-Equatorial Guinea,12.0,green,green,green,?
 Dominica,11.0,green,green,green,?
-Niger,9.0,green,green,green,?
-Bahamas,9.0,green,green,green,?
+Bahamas,10.0,green,green,green,?
+Burma,10.0,green,green,green,?
+Namibia,9.0,green,green,green,?
+Grenada,9.0,green,green,green,?
 Eswatini,9.0,green,green,green,?
-Haiti,8.0,green,green,green,?
-Suriname,8.0,green,green,green,?
-Mozambique,8.0,green,green,green,?
-Burma,8.0,green,red,?,?
-Laos,8.0,green,green,green,?
-Guinea,8.0,green,green,green,?
 Seychelles,8.0,green,green,green,?
-Grenada,7.0,green,green,green,?
+Laos,8.0,green,green,green,?
+Suriname,8.0,green,green,green,?
+Saint Lucia,8.0,green,green,green,?
+Libya,8.0,green,green,green,?
+Syria,8.0,green,green,green,?
+Mozambique,8.0,green,green,green,?
 Antigua and Barbuda,7.0,green,green,green,?
-Mayotte,7.0,green,green,green,?
-Maldives,7.0,green,green,green,?
 Russian Federation,7.0,green,red,?,?
+Mayotte,7.0,green,green,green,?
 Guyana,7.0,green,green,green,?
-Namibia,6.0,green,green,green,?
 Benin,6.0,green,green,green,?
 Gabon,6.0,green,green,green,?
-Holy See,6.0,green,green,green,?
 Zimbabwe,6.0,green,green,green,?
-Eritrea,6.0,green,green,green,?
-Mauritania,5.0,green,green,green,?
-Syria,5.0,green,green,green,?
+Holy See,6.0,green,green,green,?
+Sudan,5.0,green,green,green,?
 Angola,5.0,green,green,green,?
+Cabo Verde,5.0,green,green,green,?
 Fiji,5.0,green,green,green,?
 Nepal,4.0,green,green,green,?
-Sudan,4.0,green,green,green,?
 Aruba,4.0,green,green,green,?
-Congo (Brazzaville),4.0,green,green,green,?
-Cabo Verde,4.0,green,green,green,?
 "Bahamas, The",4.0,green,green,green,?
+Bhutan,4.0,green,green,green,?
+Maldives,4.0,green,green,green,green
 Central African Republic,3.0,green,green,green,?
 Liberia,3.0,green,green,green,?
-Chad,3.0,green,green,green,?
-Somalia,3.0,green,green,green,?
-Bhutan,3.0,green,green,green,?
-Libya,3.0,green,green,green,?
-Republic of Moldova,3.0,green,red,?,?
+Mauritania,3.0,green,green,green,?
 Nicaragua,3.0,green,green,green,?
-MS Zaandam,2.0,green,red,?,?
-Guinea-Bissau,2.0,green,green,green,?
-Gambia,2.0,green,green,green,?
+Somalia,3.0,green,green,green,?
+Chad,3.0,green,green,green,?
+Republic of Moldova,3.0,green,red,?,?
+Gambia,3.0,green,green,green,?
+Belize,2.0,green,green,green,?
 St. Martin,2.0,green,red,?,?
 Saint Martin,2.0,green,red,?,?
-Saint Lucia,2.0,green,green,green,?
 Saint Kitts and Nevis,2.0,green,green,green,?
+MS Zaandam,2.0,green,red,?,?
+Guinea-Bissau,2.0,green,green,green,?
 Faroe Islands,2.0,green,green,green,?
-Belize,2.0,green,green,green,?
 Vatican City,1.0,green,green,green,?
 Timor-Leste,1.0,green,green,green,?
  Azerbaijan,1.0,green,red,?,?
